@@ -1,0 +1,13 @@
+/*
+	1.
+
+SHRI
+    GANESHAY
+            NAMAH!
+*/
+BEGIN
+DBMS_OUTPUT.PUT_LINE('SHRI');
+DBMS_OUTPUT.PUT_LINE('    GANESHAY');
+DBMS_OUTPUT.PUT_LINE('            NAMAH!');
+END;
+/
