@@ -1,0 +1,297 @@
+SQL> REM SQL : Structured Query Language
+SQL>
+SQL> REM SQL : SINGLE LINE EXECUTION, PURPOSE SERVE
+SQL>
+SQL> REM PLSQL : ProceduraL SQL
+SQL>
+SQL> /*
+SQL>
+SQL> #include<stdio.h>
+SQL>
+SQL>
+SQL> clrscr();
+SQL> variable declaration
+SQL>
+SQL> clrscr();
+SQL>
+SQL> printf
+SQL> scanf
+SQL>
+SQL>
+SQL> calculation
+SQL> manipulation
+SQL>
+SQL> display
+SQL>
+SQL> getch();
+SQL>
+SQL> }
+SQL>
+SQL> */
+SQL>
+SQL> /*
+SQL>
+SQL> DECLARE
+SQL> ::
+SQL> ::
+SQL> ::
+SQL> BEGIN
+SQL> ::
+SQL> ::
+SQL> EXCEPTION
+SQL> ::
+SQL> ::
+SQL> ::
+SQL> END;
+SQL> /
+SQL>
+SQL> */
+SQL>
+SQL> REM DECLARE : OPTIONAL
+SQL>
+SQL> REM BEGIN/EXECUTABLE : MANDATORY
+SQL>
+SQL> REM EXCEPTION : OPTIONAL
+SQL>
+SQL> REM START D:\PLSQL\CH1\ABC.SQL
+SQL>
+SQL>
+SQL> REM DBMS_OUTPUT.PUT_LINE(single item);
+SQL>
+SQL>
+SQL> SHOW SERVEROUT
+serveroutput OFF
+SQL>
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('SHRI GANESHAY NAMAH!');
+  3  END;
+  4  /
+
+PL/SQL procedure successfully completed.
+
+SQL> SET LINES 200 PAGES 24 SERVEROUT ON
+SQL>
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('SHRI GANESHAY NAMAH!');
+  3  END;
+  4  /
+SHRI GANESHAY NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> SHOW SERVEROUT
+serveroutput ON SIZE UNLIMITED FORMAT WORD_WRAPPED
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('   SHRI GANESHAY NAMAH!');
+  3  END;
+  4  /
+SHRI GANESHAY NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> SET LINES 200 PAGES 24 SERVEROUT ON FOR WRA
+SQL>
+SQL> SHOW SERVEROUT
+serveroutput ON SIZE UNLIMITED FORMAT WRAPPED
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('   SHRI GANESHAY NAMAH!');
+  3  END;
+  4  /
+   SHRI GANESHAY NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> /*
+SQL>
+SQL> A SHRI
+SQL> B GANESHAY
+SQL> C NAMAH!
+SQL>
+SQL> */
+SQL> SET LINES 200 PAGES 24 SERVEROUT ON
+SQL>
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('SHRI GANESHAY NAMAH!');
+  3  END;
+  4  /
+SHRI GANESHAY NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> SHOW SERVEROUT
+serveroutput ON SIZE UNLIMITED FORMAT WORD_WRAPPED
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('   SHRI GANESHAY NAMAH!');
+  3  END;
+  4  /
+SHRI GANESHAY NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> SET LINES 200 PAGES 24 SERVEROUT ON FOR WRA
+SQL>
+SQL> SHOW SERVEROUT
+serveroutput ON SIZE UNLIMITED FORMAT WRAPPED
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('   SHRI GANESHAY NAMAH!');
+  3  END;
+  4  /
+   SHRI GANESHAY NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> /*
+SQL>
+SQL> A SHRI
+SQL> B GANESHAY
+SQL> C NAMAH!
+SQL>
+SQL> */
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('SHRI',' GANESHAY ','NAMAH!');
+  3  END;
+  4  /
+DBMS_OUTPUT.PUT_LINE('SHRI',' GANESHAY ','NAMAH!');
+*
+ERROR at line 2:
+ORA-06550: line 2, column 3:
+PLS-00306: wrong number or types of arguments in call to 'PUT_LINE'
+ORA-06550: line 2, column 3:
+PL/SQL: Statement ignored
+
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('SHRI' || ' GANESHAY ' || 'NAMAH!');
+  3  END;
+  4  /
+SHRI GANESHAY NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('SHRI');
+  3    DBMS_OUTPUT.PUT_LINE('GANESHAY');
+  4    DBMS_OUTPUT.PUT_LINE('NAMAH!');
+  5  END;
+  6  /
+SHRI
+GANESHAY
+NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT_LINE('SHRI' || CHR(10) || 'GANESHAY' || CHR(10) || 'NAMAH!');
+  3  END;
+  4  /
+SHRI
+GANESHAY
+NAMAH!
+
+PL/SQL procedure successfully completed.
+
+SQL> BEGIN
+  2    DBMS_OUTPUT.PUT('SHRI');
+  3    DBMS_OUTPUT.PUT(' GANESHAY ');
+  4    DBMS_OUTPUT.PUT_LINE('NAMAH!');
+  5  END;
+  6  /
+SHRI GANESHAY NAMAH!
+
+PL/SQL procedure successfully completed.
+```[cite: 12, 13, 15]
+
+---
+
+### Notepad++ File (`*new 1`)
+```sql
+/*
+SHRI
+    RAM
+*/
+
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('SHRI');
+    DBMS_OUTPUT.PUT_LINE('   RAM');
+END;
+/
+```[cite: 17]
+
+---
+
+### Notepad++ File (`Z PLSQL PROGRAM LIST 27-SEP`)
+```text
+CHAPTER 1
+
+FONT : CANDARA
+
+1.
+SHRI
+    GANESHAY
+        NAMAH!
+
+2.
+        ShrI
+    GaneshaY
+NamaH!
+
+3.
+SHRI        NAMAH!
+
+    GaNeShAy
+
+4.
+SHRI
+```[cite: 18]
+
+---
+
+### SQL*Plus Session Continued
+```text
+^       ^
+<<<<<<+>>>>>>
+   V    V
+*  V    *
+   V    V
+<<<<<<  V
+PL/SQL procedure successfully completed.
+```[cite: 19]
+
+```sql
+SQL>
+SQL>
+SQL> /*
+SQL>
+SQL> VARIABLE DECLARATION SYNTAX : variablename datatype(size) := | DEFAULT value/substitutionvariable/formula/function...;
+SQL>
+SQL> X NUMBER;
+SQL>
+SQL> X NUMBER(3);
+SQL>
+SQL> X NUMBER(5,2);
+SQL>
+SQL> X NUMBER := 10;
+SQL>
+SQL> X NUMBER DEFAULT 10;
+SQL>
+SQL> X NUMBER(3) := 100 + 23;
+SQL>
+SQL> X NUMBER(3) := SQRT(81);
+SQL>
+SQL> X NUMBER(3) := &NO;
+SQL>
+SQL> Y VARCHAR(10);
+SQL>
+SQL> Y VARCHAR(10) := 'SHRI';
+SQL>
+SQL> Y VARCHAR(10) := '&TEXT';
+SQL>
+SQL>
+SQL> Z DATE;
+SQL>
+SQL> Z DATE := SYSDATE;
+SQL>
+SQL> Z DATE DEFAULT CURRENT_DATE;
+SQL>
+SQL> Z DATE DEFAULT TO_DATE('&BDT');
+SQL>
+SQL> */
