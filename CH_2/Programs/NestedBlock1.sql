@@ -1,0 +1,50 @@
+/*
+DECLARE NESTED BLOCKS : B1 , B2 AND B3
+
+B1 : X VARIABLE
+
+B2 : Y VARIABLE
+
+B3 : Z VARIABLE
+
+B1 : DISPLAY X AND SQUARE OF X
+
+B2 : DISPLAY X + Y
+
+B3 : DISPLAY X * Y * Z
+
+B2 : DISPLAY X / Y
+
+B1 : DISPLAY CUBE OF X
+
+B1 : DISPLAY SUM OF VARIABLE Y AND Z 
+(USE BIND/HOST VARIABLES)
+*/
+VAR Y NUMBER
+VAR Z NUMBER
+<<OUTER>>
+DECLARE 
+            X NUMBER:= 10;
+BEGIN
+:Y := 50;
+:Z := 60;
+DBMS_OUTPUT.PUT_LINE('X: ' || (OUTER.X) || ' POWER(X,2): ' || POWER(X,2));
+     <<MIDDLE>> 
+	 DECLARE
+             Y NUMBER:= 20;
+     BEGIN
+	 DBMS_OUTPUT.PUT_LINE('X + Y: ' || (X + Y));
+	 
+          <<INNER>> DECLARE
+                  Z NUMBER:= 30;
+          BEGIN
+		     DBMS_OUTPUT.PUT_LINE('X * Y * Z: ' || X * Y * Z);
+		END;
+		DBMS_OUTPUT.PUT_LINE('X/Y: ' || X/Y);
+	END;
+DBMS_OUTPUT.PUT_LINE('POWER(X,3): ' || POWER(X,3));
+	
+	DBMS_OUTPUT.PUT_LINE(':Y + :Z: ' || (:Y + :Z));
+	
+END;
+/

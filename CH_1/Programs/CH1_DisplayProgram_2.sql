@@ -1,8 +1,7 @@
 /*
 2.		
-
               ShrI
-	  GaneshaY
+      GaneshaY
 NamaH!
 */
 BEGIN
